@@ -1,0 +1,29 @@
+{
+  "scenario_id": "svg-svg-to-pdf-converter",
+  "package_id": "Aspose.SVG",
+  "package_version": "24.12.0",
+  "target_framework": "net8.0",
+  "namespace_source": "NON_LOWCODE_PLUGIN",
+  "public_repo_kind": "PLUGIN_EXAMPLES",
+  "folder_namespace_segment": "",
+  "discovery_method": "PLUGIN_PAGE_PROBE",
+  "canonical_url": "https://products.aspose.net/svg/svg-to-pdf-converter/",
+  "claimed_symbols": [
+    "SVGDocument.RenderTo"
+  ],
+  "status": "generated",
+  "input_strategy": "programmatic",
+  "input_files": [],
+  "input_format": ".svg",
+  "output_format": ".pdf",
+  "operation_kind": "convert",
+  "expected_output_extension": ".pdf",
+  "contract_input_format": ".svg",
+  "contract_output_format": ".pdf",
+  "contract_operation_kind": "convert",
+  "contract_output_kind": "file",
+  "contract_output_cardinality": "single",
+  "contract_id": "svg/svg-to-pdf-converter",
+  "proven_wave": "W12",
+  "pclc_eligible": true
+}
