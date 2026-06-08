@@ -1,0 +1,29 @@
+{
+  "scenario_id": "svg-merge-svg",
+  "package_id": "Aspose.SVG",
+  "package_version": "24.12.0",
+  "target_framework": "net8.0",
+  "namespace_source": "NON_LOWCODE_PLUGIN",
+  "public_repo_kind": "PLUGIN_EXAMPLES",
+  "folder_namespace_segment": "",
+  "discovery_method": "PLUGIN_PAGE_PROBE",
+  "canonical_url": "https://products.aspose.net/svg/merge-svg/",
+  "claimed_symbols": [
+    "SVGDocument.RenderTo"
+  ],
+  "status": "generated",
+  "input_strategy": "programmatic",
+  "input_files": [],
+  "input_format": ".svg",
+  "output_format": ".svg",
+  "operation_kind": "merge",
+  "expected_output_extension": ".svg",
+  "contract_input_format": ".svg",
+  "contract_output_format": ".svg",
+  "contract_operation_kind": "merge",
+  "contract_output_kind": "file",
+  "contract_output_cardinality": "single",
+  "contract_id": "svg/merge-svg",
+  "proven_wave": "W18",
+  "pclc_eligible": true
+}
