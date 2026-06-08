@@ -1,0 +1,39 @@
+name: Build and Validate Aspose.SVG Plugin Examples
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example:
+          - examples/svg/merge-svg
+          - examples/svg/svg-to-pdf-converter
+          - examples/svg/vectorizer
+          - examples/svg/svg-to-image-converter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore
+        run: dotnet restore ${{ matrix.example }}
+      - name: Build
+        run: dotnet build ${{ matrix.example }} --no-restore
+      - name: Validate expected-output
+        run: |
+          if [ ! -f "${{ matrix.example }}/expected-output.json" ]; then
+            echo "FAIL: missing expected-output.json in ${{ matrix.example }}"
+            exit 1
+          fi
+      - name: Validate manifest
+        run: |
+          if [ ! -f "${{ matrix.example }}/example.manifest.json" ]; then
+            echo "FAIL: missing example.manifest.json in ${{ matrix.example }}"
+            exit 1
+          fi
